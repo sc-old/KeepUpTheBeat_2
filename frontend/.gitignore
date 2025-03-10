@@ -1,0 +1,8 @@
+**/.bun
+/node_modules
+.DS_Store
+*.env
+*run.sh
+*.nuxt
+*.output
+frontend/package-lock.json

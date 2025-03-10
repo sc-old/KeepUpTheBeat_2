@@ -1,0 +1,658 @@
+
+
+
+/* 
+
+@media only screen and (min-width: 0px) and (max-width: 376px) {
+}
+  
+@media only screen and (min-width: 376px) and (max-width: 576px) {
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+}
+
+
+@media only screen and (min-width: 1600px) and (max-width: 2000px) {
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 2500px) {
+}
+
+@media only screen and (min-width: 2500px) and (max-width: 5600px) {
+}
+
+
+
+
+
+
+@media only screen and (max-height: 600px) and (min-width: 600px) {
+}
+
+@media only screen and (min-height: 600px) and (max-height: 750px) {
+}
+
+@media only screen and (min-height: 750px) and (max-height: 900px) {
+}
+
+@media only screen and (min-height: 900px) and (max-height: 1000px) {
+}
+
+@media only screen and (min-height: 1000px) and (max-height: 1100px) {
+}
+
+@media only screen and (min-height: 1100px) and (max-height: 1250px) {
+}
+
+@media only screen and (min-height: 1250px) and (max-height: 1500px) {
+}
+
+ */
+
+
+
+
+
+
+
+/* CSS RESET */
+/* CSS RESET */
+/* CSS RESET */
+/* CSS RESET */
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+@media print {
+  body {
+    font-size: 8pt;
+  }
+}
+
+
+/* CSS RESET */
+/* CSS RESET */
+/* CSS RESET */
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: "ASAP";
+  src: url("~/assets/fonts/Asap_Complete/Fonts/WEB/fonts/Asap-Regular.woff2") format("woff2"),
+       url("~/assets/fonts/Asap_Complete/Fonts/WEB/fonts/Asap-Regular.woff") format("woff"),
+       url("~/assets/fonts/Asap_Complete/Fonts/WEB/fonts/Asap-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add additional font weights if needed */
+@font-face {
+  font-family: "ASAP";
+  src: url("~/assets/fonts/Asap_Complete/Fonts/WEB/fonts/Asap-Bold.woff2") format("woff2"),
+       url("~/assets/fonts/Asap_Complete/Fonts/WEB/fonts/Asap-Bold.woff") format("woff"),
+       url("~/assets/fonts/Asap_Complete/Fonts/WEB/fonts/Asap-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Funkis_B";
+  src: url("~/assets/fonts/Funkis_B_Regular.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+  h1 {
+    font-family: "ASAP", sans-serif; /* Fallback font added */
+    font-weight: 300; /* Consistent with the @font-face rule */
+    /* text-transform: uppercase; */
+  }
+
+  p{
+    font-family: "Funkis_B", sans-serif; /* Fallback font added */
+  }
+
+
+  .text_1 {
+    font-size: 18px;
+    color: var(--text_color);
+    line-height: 1.5;
+  }
+
+  .text_2 {
+    font-size: 16px;
+    color: var(--text_color);
+    line-height: 1.25;
+  }
+
+  li{
+    font-size: 18px;
+    line-height: 1.5;
+}
+  
+
+  .marbleOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity:.15;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-image: url("~/assets/content/images/marble_overlay.jpg");
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .paperOverlayMain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity:.35;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-image: url("~/assets/content/images/paper_overlay_3.webp");
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+    height: calc(100% - 500px);
+  }
+
+  .paperOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity:.35;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-image: url("~/assets/content/images/paper_overlay_3.webp");
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+
+
+ html{
+    /* for firefox */
+    scrollbar-width: none;
+    background-color: var(--background_color);
+  }
+
+  body{
+    font-family: "ASAP", sans-serif;
+      line-height: 1;
+      word-spacing: 4px;
+      font-weight:100;
+      background-color: #fff;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      z-index:1;
+      position: relative;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    display: none;
+    background: transparent;
+  }
+  
+
+  body::-webkit-scrollbar {
+    width: 3px !important;
+    border-radius: 10px !important;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: rgba(0, 149, 255, 0.676) !important;
+    border-radius: 10px !important;
+  }
+
+
+  [data-underline] {
+    display: inline-block;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(255, 187, 30, 0.7), rgba(255, 187, 30, 0.7));
+    background-size: 0% 0%;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    padding: 0 0.5rem;
+  }
+
+  [data-double-underline]{
+    display: inline-block;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(23, 129, 228, 0.7), rgba(23, 129, 228, 0.7));
+    background-size: 0% 0%;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    padding: 0 0.5rem;
+  }
+  
+  [data-circle] {
+    display: inline-block;
+    border: 2px solid transparent; /* Initially no border */
+    border-radius: 50%; /* To create a circular border */
+    position: relative;
+  }
+
+
+  [data-highlight] {
+    display: inline-block;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(23, 129, 228, 0.7), rgba(23, 129, 228, 0.7));
+    border: 1px solid rgba(100, 100, 100, 0.8);
+    background-size: 0% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 0 0.5rem;
+    border-radius:5px;
+  }
+  
+
+  
+  .highlight{
+    color:var(--text_color_two);
+    background-color: rgba(178, 178, 178, 0.15);
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius:5px;
+    padding:4px 0px;
+    width:0px;
+    white-space: nowrap;
+    display: inline-block;
+    backdrop-filter: blur(2px);
+}
+
+.highlight_overlay{
+  color:var(--text_color_two) !important;
+  background-color:rgb(214, 22, 22, .15);
+  border: 2px solid rgb(214, 22, 22, .5);
+  border-radius:5px;
+  padding:4px 0px;
+  width:0px;
+  white-space: nowrap;
+  display: block;
+  backdrop-filter: blur(2px);
+}
+
+
+.swiper-pagination {
+  text-align: center;
+  position: absolute;
+  bottom: -50% !important;
+  z-index: 100; /* Ensures pagination is above other content */
+}
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  opacity: 1 !important;
+  margin: 0px 20px !important;
+  transition: all 3s ease !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #1781e4 !important;
+}
+
+
+
+:root{
+  --transition_color: rgb(246, 246, 246);
+  --transition_border: rgba(0, 0, 1, 0.2);
+}
+
+
+
+.main_theme {
+
+    --primary_color: #082a42;
+    --secondary_color: #b0b4b5;
+    --accent_color: #ffbb1e;
+    --accent_color_two: #ffbb1e;
+    --accent_color_two_alpha: rgba(205, 153, 13, 0.8);
+    --line_color: rgba(70, 70, 70, 0);
+    --line_color_two: rgba(0, 66, 65, 0);
+    --text_color: #fff;
+    --text_color_two: #1781e4;
+    --text_color_three: #fff;  
+    --overlay_text_color: #fff;
+    --background_color: #000;
+    --background_color_two: #000;
+    --overlay_color: rgba(250, 250, 250, 0.25);
+
+    /* linear-gradient(180deg,#c2c0b5 0,#c2c0b5 30%,#eee1c5 50%,#ecc3b2 100%) */
+
+  }
+
+  .secondary_theme{
+    --primary_color: #002442;
+    --secondary_color: #1090c6;
+    --accent_color: #f2be45;
+    --line_color: rgba(70, 70, 70, 0);
+    --line_color_two: rgba(0, 40, 66, 0);
+    --text_color: #000001;
+    --background_color: rgb(227, 227, 227);
+    --background_color_two: #000001;
+    --text_color_two: #fff;
+    --overlay_color: rgba(255, 255, 255, 0.2);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (min-width: 0px) and (max-width: 376px) {
+    .text_1 {
+      font-size: 14px;
+    }
+
+    .text_2 {
+      font-size: 12px;
+    }
+
+    li{
+      font-size: 14px;
+      line-height: 1.5;
+  }
+  }
+    
+  @media only screen and (min-width: 376px) and (max-width: 576px) {
+    .text_1 {
+      font-size: 14px;
+    }
+
+    .text_2 {
+      font-size: 12px;
+    }
+
+    li{
+      font-size: 14px;
+      line-height: 1.5;
+  }
+  }
+  
+  @media only screen and (min-width: 576px) and (max-width: 769px) {
+    .text_1 {
+      font-size: 16px;
+    }
+
+    .text_2 {
+      font-size: 14px;
+    }
+
+    li{
+      font-size: 16px;
+      line-height: 1.5;
+  }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    .text_1 {
+      font-size: 16px;
+    }
+
+    .text_2 {
+      font-size: 14px;
+    }
+
+    li{
+      font-size: 16px;
+      line-height: 1.5;
+  }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+  }
+  
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .text_1 {
+      font-size: 25px;
+    }
+
+    .text_2 {
+      font-size: 20px;
+    }
+
+    li{
+      font-size: 25px;
+      line-height: 1.5;
+  }
+  }
+  
+  @media only screen and (min-width: 1400px) and (max-width: 1600px) {
+    .text_1 {
+      font-size: 23px;
+    }
+
+    .text_2 {
+      font-size: 18px;
+    }
+
+    li{
+      font-size: 23px;
+      line-height: 1.5;
+  }
+  }
+  
+  
+  
+  @media only screen and (min-width: 1600px) and (max-width: 2000px) {
+    .text_1 {
+      font-size: 30px;
+    }
+
+    .text_2 {
+      font-size: 25px;
+    }
+
+    li{
+      font-size: 30px;
+      line-height: 1.5;
+  }
+  }
+  
+  @media only screen and (min-width: 2000px) and (max-width: 2500px) {
+    .text_1 {
+      font-size: 35px;
+    }
+
+    .text_2 {
+      font-size: 30px;
+    }
+
+    li{
+      font-size: 35px;
+      line-height: 1.5;
+  }
+  }
+  
+  @media only screen and (min-width: 2500px) and (max-width: 5600px) {
+    .text_1 {
+      font-size: 35px;
+    }
+
+    .text_2 {
+      font-size: 30px;
+    }
+
+    li{
+      font-size: 35px;
+      line-height: 1.5;
+  }
+  }
+  
+
+
+
+@media only screen and (max-height: 600px) and (min-width: 600px) {
+  .text_1 {
+    font-size: 16px;
+  }
+
+  .text_2 {
+    font-size: 14px;
+  }
+
+  li{
+    font-size: 16px;
+    line-height: 1.5;
+}
+}
+
+@media only screen and (min-height: 600px) and (max-height: 750px) {
+  .text_1 {
+    font-size: 16px;
+  }
+
+  .text_2 {
+    font-size: 14px;
+  }
+
+  li{
+    font-size: 16px;
+    line-height: 1.5;
+}
+}
+
+@media only screen and (min-height: 750px) and (max-height: 900px) {
+}
+
+@media only screen and (min-height: 900px) and (max-height: 1000px) {
+}
+
+@media only screen and (min-height: 1000px) and (max-height: 1100px) {
+}
+
+@media only screen and (min-height: 1100px) and (max-height: 1250px) {
+}
+
+@media only screen and (min-height: 1250px) and (max-height: 1500px) {
+}
+
+
+  
+  
